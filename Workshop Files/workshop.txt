@@ -1,0 +1,7 @@
+version=1.0
+title=Rick's MLC Zombie Slam
+description= Slam a zombie when sprinting into a door.
+description= Many thanks to @bonz for throwing out an off-hand comment about how he would like this feature...
+description= Many thanks to @dytmyers1995 for assistance in working out the play details.
+tags=Build 41
+visibility=private
