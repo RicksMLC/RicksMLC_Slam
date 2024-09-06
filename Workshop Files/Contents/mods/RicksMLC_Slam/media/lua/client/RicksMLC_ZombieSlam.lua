@@ -17,7 +17,7 @@ local maxTickCount = 80 -- 70, 90, 110, 120+ is a bit too long
 local function OnRenderTick()
     tickCount = tickCount + 1
     if tickCount > maxTickCount then
-        DebugLog.log(DebugType.Mod, "ZombieSlam ticks:" .. tostring(maxTickCount))
+        --DebugLog.log(DebugType.Mod, "ZombieSlam ticks:" .. tostring(maxTickCount))
         getCore():addKeyBinding("Sprint", origSprintKey)
         tickCount = 0
         -- TODO: Remove this commented out code when the number of ticks is solid.
@@ -53,7 +53,7 @@ local function OnObjectCollide(char, obj)
         if char:isSprinting() then
             obj:ToggleDoor(char)
             local otherSideSquare = obj:getOtherSideOfDoor(char)
-            zombies = getZombies(otherSideSquare)
+            local zombies = getZombies(otherSideSquare)
             if #zombies > 0 then
                 for _, zombie in ipairs(zombies) do
                     zombie:setDefaultState()
